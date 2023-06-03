@@ -13,11 +13,11 @@
       <img src="images/halie-west-25xggax4bSA-unsplash.jpg" alt="bg">
       <div class="wrapper bg-img-text-wrapper">
         <img src="images/odin-lined.png" alt="odin-logo">
-        <h1 class="odin-text">ODIN</h1>
+          <h1 class="odin-text">ODIN</h1>
+          <p id="image-credit">Photo by 
+           <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on
+           <a href="https://unsplash.com/photos/25xggax4bSA" target="_blank">unsplash</a></p>
       </div>
-      <p id="image-credit">Photo by 
-        <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on
-        <a href="https://unsplash.com/photos/25xggax4bSA" target="_blank">unsplash</a></p>
     </div>
     <div class="wrapper form-wrap">
       <div class="wrapper intro-wrapper">
@@ -28,47 +28,56 @@
         </p>
         <p class="form-intro-2">You <em>know</em> you want to.</p>
       </div>
-      <form action="none" method="post" class="wrapper form-details">
+      <form action="index.html" method="post" class="wrapper form-details">
         <fieldset class="wrapper">
-          <label for="first-form" class="main-label">Let's do this!</label>
+          <label for="" class="main-label">Let's do this!
+            <span id="required-alert">required</span>
+          </label>
           <ul class="wrapper">
             <li class="wrapper last-name-wrapper">
               <label for="first-name">FIRST NAME</label>
-              <input type="text" name="first-name" id="first-name" 
-              placeholder="Thor" minlength="2" maxlength="20">
+              <input type="text" name="first-name" id="first-name"
+              minlength="0" maxlength="20" autocomplete="name" required/>
+              <span></span>
             </li>
             <li class="wrapper last-name-wrapper">
               <label for="last-name">LAST NAME</label>
               <input type="text" name="last-name" id="last-name"
-              placeholder="Odinson" minlength="2" maxlength="20">
+              minlength="0" maxlength="20" autocomplete="name" required/>
+              <span></span>
             </li>
           </ul>
           <ul class="wrapper">
             <li class="wrapper email-wrapper">
               <label for="email">EMAIL</label>
-              <input type="email" name="email" id="email">
+              <input type="email" name="email" id="email" autocomplete="email" required/>
+              <span></span>
             </li>
             <li class="wrapper phone-number-wrapper">
               <label for="phone-number">PHONE NUMBER</label>
-              <input type="tel" name="phone-number" id="phone-number">
+              <input type="tel" name="phone-number" id="phone-number" required/>
+              <span></span>
             </li>
           </ul>
           <ul class="wrapper">
             <li class="wrapper password">
               <label for="password">PASSWORD</label>
-              <input type="text" name="password" id="password">
+              <input type="text" name="password" id="password" required/>
+              <span></span>
             </li>
             <li class="wrapper confirm-password">
               <label for="confirm-password">CONFIRM PASSWORD</label>
-              <input type="text" name="confirm-password" id="confirm-password">
+              <input type="text" name="confirm-password" id="confirm-password" required/>
+              <span></span>
             </li>
           </ul>
+          <p id="pass-alert"></p>
+          <div class="wrapper footer">
+            <button type="submit" id="create-account">Create Account</button>
+            <p id="account-reminder">Already have an account?<a href="#">Log in</a></p>
+          </div>
         </fieldset>
       </form>
-      <div class="wrapper footer">
-        <button type="submit" id="create-account">Create Account</button>
-        <p id="account-reminder">Already have an account?<a href="">Log in</a></p>
-      </div>
     </div>
   </div>
 </body>

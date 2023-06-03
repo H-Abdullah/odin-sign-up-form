@@ -122,10 +122,9 @@ body {
   text-align: center;
   font-size: 0.8rem;
   color: #ffffff;
-  top: 50%;
-  left: 50%;
+  top: 76vh;
+  left: 0;
   gap: 10px;
-  transform: translate(-50%, 2500%);
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -180,11 +179,30 @@ fieldset {
   width: 60vw;
   height: auto;
   gap: 20px;
+  
 }
 
 .main-label {
   font-size: 1.2rem;
   font-weight: bolder;
+}
+
+.main-label {
+  position: relative;
+}
+
+#required-alert {
+  position: absolute;
+  top: 6px;
+  right: 300px;
+  font-size: 0.7rem;
+  font-weight: lighter;
+}
+
+#required-alert::before {
+  content: '  *';
+  color: #e00000;
+  font-size: 20px;
 }
 
 ul {
@@ -204,9 +222,16 @@ li > label {
   color: rgba(0, 0, 0, 1);
 }
 
+li > label::after {
+  content: '  *';
+  color: #e00000;
+  font-size: 20px;
+}
+
 label + input {
   width: 15vw;
 }
+
 
 input {
   border: 1px solid #000000;
@@ -217,8 +242,44 @@ input {
 }
 
 input:focus {
-  border: 1px solid rgba(30, 5, 141, 1);
-  box-shadow: 1px 1px 1px 1px rgb(30, 5, 141)
+  outline: 1px solid rgba(0, 0, 0, 1);
+}
+
+input + span {
+  position: relative;
+}
+
+span::after {
+  position: absolute;
+  top: -25px;
+  right: -18px;
+}
+
+input:focus:invalid {
+  background-color: rgba(224, 0, 0, 0.3);
+}
+
+input:focus:valid {
+  background-color: rgba(72, 255, 0, 0.3);
+}
+
+input:focus:invalid + span::after {
+  content: '✖';
+  color: #e00000;
+  font-weight: bolder;
+}
+
+input:valid + span::after,
+input:focus:valid + span::after {
+  content: '✓';
+  color: #48ff00;
+  font-weight: bolder;
+}
+
+#pass-alert {
+  width: 30vw;
+  height: 20px;
+  margin-top: -20px;
 }
 
 .footer {
