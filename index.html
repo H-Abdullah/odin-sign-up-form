@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head lang="en-us">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+  <title>Sign-Up</title>
+</head>
+<body>
+  <div id="body-wrapper" class="wrapper">
+    <div class="wrapper image-wrap">
+      <img src="images/halie-west-25xggax4bSA-unsplash.jpg" alt="bg">
+      <div class="wrapper bg-img-text-wrapper">
+        <img src="images/odin-lined.png" alt="odin-logo">
+        <h1 class="odin-text">ODIN</h1>
+      </div>
+      <p id="image-credit">Photo by 
+        <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on
+        <a href="https://unsplash.com/photos/25xggax4bSA" target="_blank">unsplash</a></p>
+    </div>
+    <div class="wrapper form-wrap">
+      <div class="wrapper intro-wrapper">
+        <p class="form-intro-1">
+          This is not a real online service! You know you need something
+          like this in your life to help you realize your deepest dreams.
+          Sign up <i>now</i> to get started.
+        </p>
+        <p class="form-intro-2">You <em>know</em> you want to.</p>
+      </div>
+      <form action="none" method="post" class="wrapper form-details">
+        <fieldset class="wrapper">
+          <label for="first-form" class="main-label">Let's do this!</label>
+          <ul class="wrapper">
+            <li class="wrapper last-name-wrapper">
+              <label for="first-name">FIRST NAME</label>
+              <input type="text" name="first-name" id="first-name" 
+              placeholder="Thor" minlength="2" maxlength="20">
+            </li>
+            <li class="wrapper last-name-wrapper">
+              <label for="last-name">LAST NAME</label>
+              <input type="text" name="last-name" id="last-name"
+              placeholder="Odinson" minlength="2" maxlength="20">
+            </li>
+          </ul>
+          <ul class="wrapper">
+            <li class="wrapper email-wrapper">
+              <label for="email">EMAIL</label>
+              <input type="email" name="email" id="email">
+            </li>
+            <li class="wrapper phone-number-wrapper">
+              <label for="phone-number">PHONE NUMBER</label>
+              <input type="tel" name="phone-number" id="phone-number">
+            </li>
+          </ul>
+          <ul class="wrapper">
+            <li class="wrapper password">
+              <label for="password">PASSWORD</label>
+              <input type="text" name="password" id="password">
+            </li>
+            <li class="wrapper confirm-password">
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <input type="text" name="confirm-password" id="confirm-password">
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+      <div class="wrapper footer">
+        <button type="submit" id="create-account">Create Account</button>
+        <p id="account-reminder">Already have an account?<a href="">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</body>
